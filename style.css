@@ -575,16 +575,22 @@ body::after {
 /* PROJECT */
 
 .projects-grid {
+    width: 100%;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
+
+    align-items: stretch;
 }
 
 .project-card {
     position: relative;
+    width: 100%;
+    min-width: 0;
+
     padding: 30px;
 
     border: 1px solid var(--border);
@@ -592,14 +598,20 @@ body::after {
 
     background: var(--card);
 
-    transition: 0.3s;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
     overflow: hidden;
 }
 
 .project-card:hover {
     transform: translateY(-7px);
     border-color: rgba(255, 79, 163, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 47, 146, 0.08);
 }
+
+/* NOMOR PROJECT */
 
 .project-number {
     position: absolute;
@@ -609,8 +621,12 @@ body::after {
     font-size: 45px;
     font-weight: 700;
 
-    color: rgba(255,255,255,0.04);
+    color: rgba(255, 255, 255, 0.04);
+
+    pointer-events: none;
 }
+
+/* ICON */
 
 .project-icon {
     width: 55px;
@@ -623,23 +639,36 @@ body::after {
     border-radius: 13px;
 
     color: var(--pink);
-    background: rgba(255,79,163,0.08);
+    background: rgba(255, 79, 163, 0.08);
 
     font-size: 23px;
+
     margin-bottom: 20px;
 }
+
+/* JUDUL */
 
 .project-card h3 {
     font-size: 19px;
+    line-height: 1.4;
+
     margin-bottom: 12px;
+
+    padding-right: 50px;
 }
+
+/* DESKRIPSI */
 
 .project-card > p {
     color: var(--text);
+
     font-size: 13px;
     line-height: 1.8;
+
     margin-bottom: 20px;
 }
+
+/* TAG */
 
 .project-tags {
     display: flex;
@@ -648,30 +677,40 @@ body::after {
 }
 
 .project-tags span {
+    display: inline-block;
+
     padding: 5px 10px;
 
     border-radius: 5px;
 
     color: var(--pink);
-    background: rgba(255,79,163,0.07);
+    background: rgba(255, 79, 163, 0.07);
 
     font-size: 10px;
 }
 
+/* LINK PROJECT */
+
 .project-link {
     display: inline-flex;
-    gap: 8px;
     align-items: center;
+    gap: 8px;
 
     margin-top: 25px;
 
     color: var(--white);
+
     text-decoration: none;
+
     font-size: 12px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
 }
 
 .project-link:hover {
     color: var(--pink);
+    transform: translateX(3px);
 }
 
 
