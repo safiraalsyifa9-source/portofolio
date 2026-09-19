@@ -6,14 +6,14 @@
 }
 
 :root {
-    --bg: #07111f;
-    --bg-light: #0b1829;
-    --card: rgba(15, 31, 51, 0.75);
+    --bg: #4e1438;
+    --bg-light: #c193b9;
+    --card: rgba(162, 56, 130, 0.75);
     --pink: #ff4fa3;
-    --pink-dark: #ff2f92;
+    --pink-dark: #4bb4c2;
     --white: #f5f9ff;
-    --text: #aebdce;
-    --border: rgba(255, 255, 255, 0.09);
+    --text: #ed94d4;
+    --border: rgba(236, 162, 214, 0.09);
 }
 
 body {
@@ -67,7 +67,7 @@ body::after {
     left: 0;
     z-index: 1000;
 
-    background: rgba(7, 17, 31, 0.85);
+    background: rgba(24, 22, 24, 0.85);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
 }
@@ -751,7 +751,7 @@ body::after {
 
 /* Card Box Style (Menyesuaikan desainServices sebelumnya) */
 .education-box {
-    background: #0d1b2a; /* Latar belakang card gelap */
+    background: #ab609a; /* Latar belakang card gelap */
     padding: 3rem 2rem 2.5rem;
     border-radius: 1.2rem;
     border: 1px solid rgba(0, 238, 255, 0.1);
